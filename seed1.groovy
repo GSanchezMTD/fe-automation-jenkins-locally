@@ -5,16 +5,11 @@ pipelineJob("Seed job 1") {
         pipeline {
           agent any
           stages {
-
             stage('Build'){
-                steps {
-                    sh 'COMPONENT=${COMPONENT} TESTCASE=${TESTCASE} SERVER=${SERVER} npm run devtools-kubernetes'
-                }
+              sh 'COMPONENT=MT/AMPArticles/Analytics/Features TESTCASE=SmokeTestMTFeaturesAMPArticle npm run devtools-kubernetes'
             }
-
           }
         }
-      }
     ''')   
     }
   }
