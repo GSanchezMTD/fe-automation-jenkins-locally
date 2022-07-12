@@ -6,3 +6,4 @@ definition {
         sh 'COMPONENT=MT/Homepage/UIUX TESTCASE=SmokeTestSearch npm run devtools-kubernetes'
     }
 }
+}
