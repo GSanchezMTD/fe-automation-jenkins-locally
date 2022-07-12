@@ -1,11 +1,21 @@
-def githubUrl = "https://github.com/m-goos/jenkins-jobdsl-seedrepo-example.git"
-
 pipelineJob("Seed job 1") {
-definition {
-    node('build') {
-        stage('UIUX - Search - LG5-5254') {
-            sh 'COMPONENT=MT/Homepage/UIUX TESTCASE=SmokeTestSearch npm run devtools-kubernetes'
+  definition {
+    cps {
+      script('''
+        pipeline {
+          agent any
+          stages {
+
+            stage('Build'){
+                steps {
+                    sh 'COMPONENT=${COMPONENT} TESTCASE=${TESTCASE} SERVER=${SERVER} npm run devtools-kubernetes'
+                }
+            }
+
+          }
         }
+      }
+    ''')   
     }
-}
+  }
 }
