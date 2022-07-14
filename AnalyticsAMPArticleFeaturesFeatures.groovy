@@ -1,4 +1,8 @@
-pipelineJob("./Smoke Tests/Analytics - AMP Article - Features - Features - LG5-5201") {
+folder('SmokeTests'){
+    description('my description')
+    displayName('My Display Name')
+}
+pipelineJob("/Smoke Tests/Analytics - AMP Article - Features - Features - LG5-5201") {
   definition {
     cps {
       script('''
