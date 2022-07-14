@@ -1,4 +1,4 @@
-pipelineJob("/Smoke Tests/Analytics - AMP Article - Features - Features - LG5-5201") {
+pipelineJob("./Smoke Tests/Analytics - AMP Article - Features - Features - LG5-5201") {
   definition {
     cps {
       script('''
