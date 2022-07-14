@@ -1,4 +1,12 @@
-pipelineJob("ONO/Front End/FE Smoke Tests - Staging/Analytics - AMP Article - Features - Features - LG5-5201") {
+def path1 = "ONO/Front End/FE Smoke Tests - Staging/";
+
+def component = "MT/AMPArticles/Analytics/Features";
+def testcase = "SmokeTestMTFeaturesAMPArticle";
+def server1 = "carbon-stg";
+def server2 = "carbon-preprod-akamai";
+def server3 = "prod";
+
+pipelineJob(${path1} + "Analytics - AMP Article - Features - Features - LG5-5201") {
   definition {
     cps {
       script('''
@@ -7,12 +15,12 @@ pipelineJob("ONO/Front End/FE Smoke Tests - Staging/Analytics - AMP Article - Fe
           stages {
             stage('Build'){
                 steps{
-                    sh 'COMPONENT=MT/AMPArticles/Analytics/Features TESTCASE=SmokeTestMTFeaturesAMPArticle npm run devtools-kubernetes'
+                    sh 'COMPONENT='''+${component}+''' TESTCASE='''+${testcase}+''' SERVER='''+${server1}+''' npm run devtools-kubernetes'
                 }
             }
           }
         }
-    ''')   
+    ''')
     }
   }
 }
@@ -25,12 +33,12 @@ pipelineJob("ONO/Front End/FE Smoke Tests - Preproduction behind Akamai/Analytic
           stages {
             stage('Build'){
                 steps{
-                    sh 'COMPONENT=MT/AMPArticles/Analytics/Features TESTCASE=SmokeTestMTFeaturesAMPArticle npm run devtools-kubernetes'
+                    sh 'COMPONENT='''+${component}+''' TESTCASE='''+${testcase}+''' SERVER='''+${server1}+''' npm run devtools-kubernetes'
                 }
             }
           }
         }
-    ''')   
+    ''')
     }
   }
 }
@@ -43,12 +51,12 @@ pipelineJob("ONO/Front End/FE Smoke Tests - Production/Analytics - AMP Article -
           stages {
             stage('Build'){
                 steps{
-                    sh 'COMPONENT=MT/AMPArticles/Analytics/Features TESTCASE=SmokeTestMTFeaturesAMPArticle npm run devtools-kubernetes'
+                    sh 'COMPONENT='''+${component}+''' TESTCASE='''+${testcase}+''' SERVER='''+${server1}+''' npm run devtools-kubernetes'
                 }
             }
           }
         }
-    ''')   
+    ''')
     }
   }
 }
