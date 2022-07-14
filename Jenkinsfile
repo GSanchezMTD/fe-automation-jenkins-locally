@@ -4,7 +4,7 @@ pipeline {
         stage('Pipeline to seed or update all pipelines') {
             steps {
                 jobDsl  targets: ['SmokeTests/*.groovy'].join('\n')
-                jobDsl  targets: ['SmokeTests/*.groovy'].join('\n')
+                jobDsl  targets: ['*.groovy'].join('\n')
             }
         }
     }
