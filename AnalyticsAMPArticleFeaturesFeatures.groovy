@@ -1,6 +1,6 @@
 folder('SmokeTests'){
     description('my description')
-    displayName('My Display Name')
+    displayName('Smoke Tests')
 }
 pipelineJob("/Smoke Tests/Analytics - AMP Article - Features - Features - LG5-5201") {
   definition {
