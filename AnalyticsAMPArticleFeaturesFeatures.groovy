@@ -1,7 +1,3 @@
-folder('Smoke Tests'){
-    description('my description')
-    displayName('Smoke Tests')
-}
 pipelineJob("/Smoke Tests/Analytics - AMP Article - Features - Features - LG5-5201") {
   definition {
     cps {
