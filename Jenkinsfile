@@ -1,3 +1,7 @@
+folder('Smoke Tests'){
+    description('my description')
+    displayName('Smoke Tests')
+}
 pipeline {
     agent any 
     stages {
