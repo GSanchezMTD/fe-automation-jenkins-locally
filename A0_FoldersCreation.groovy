@@ -2,15 +2,15 @@ folder('QA-Selenium/Jenkins Testing/ONO'){
   description('my description')
   displayName('ONO')
 }
-/*
-folder('/ONO/Front End'){
+folder('QA-Selenium/Jenkins Testing/ONO/Front End'){
   description('my description')
   displayName('Front End')
 }
-folder('/ONO/Front End/FE Smoke Tests - Staging'){
+folder('QA-Selenium/Jenkins Testing/ONO/Front End/FE Smoke Tests - Staging'){
   description('my description')
   displayName('FE Smoke Tests - Staging')
 }
+/*
 folder('/ONO/Front End/FE Smoke Tests - Production'){
   description('my description')
   displayName('FE Smoke Tests - Production')
