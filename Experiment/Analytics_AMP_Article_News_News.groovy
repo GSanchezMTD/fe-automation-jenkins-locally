@@ -1,12 +1,9 @@
-def jobName = 'UIUX - BuyersGuide - Car Match - LG5-5565';
-
-def paths = ["QA-Selenium/Jenkins Testing/ONO/Front End/FE Smoke Tests - Staging/"];
 def servers = ["carbon-stg"];
 
 def i = 0;
 
 servers.each{ value -> 
-  pipelineJob(""${paths[i]}" + "${jobName}"") {
+  pipelineJob("QA-Selenium/Jenkins Testing/ONO/Front End/FE Smoke Tests - Staging/UIUX - BuyersGuide - Car Match - LG5-5565") {
   definition {
     cps {
       script('''
