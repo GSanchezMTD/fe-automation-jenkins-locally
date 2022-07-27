@@ -13,7 +13,7 @@ def component = "MT/AMPArticles/ANALYTICS/News/";
 def testcase = "SmokeTestMTNewsAMPArticle";
 
 servers.each{ value -> 
-  pipelineJob("${paths[i]}" + "${jobName}") {
+  pipelineJob(""${paths[i]}" + "${jobName}"") {
   definition {
     cps {
       script('''

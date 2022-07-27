@@ -1,7 +1,8 @@
-folder('ONO'){
+folder('QA-Selenium/Jenkins Testing/ONO'){
   description('my description')
   displayName('ONO')
 }
+/*
 folder('/ONO/Front End'){
   description('my description')
   displayName('Front End')
@@ -30,3 +31,4 @@ folder('/ONO/Front End/FE Regression Tests - Preproduction Behind Akamai'){
   description('my description')
   displayName('FE Regression Tests - Preproduction Behind Akamai')
 }
+*/
